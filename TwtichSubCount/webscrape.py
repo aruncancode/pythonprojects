@@ -11,6 +11,9 @@ client = Request(url=url, headers=headers)
 page_html = urlopen(client).read()
 page_soup = soup(page_html, "html.parser")
 
+
+database = {}
 for row in page_soup.find_all('tr'):
-    for cell in row.find_all('td'):
-        print(cell.text)
+    for cell in row.find_all('td'):   
+        print((cell.text).replace('subscriber count', ''))
+    print('\n')
