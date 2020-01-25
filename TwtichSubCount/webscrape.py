@@ -19,9 +19,11 @@ for row in table.find_all('tr')[1:]:
         db[cell[2].text] = [cell[0].text, cell[3].text]
 
 
-user = input('username ')
-
-if user in db:
-    print(db[user])
-else:
-    print('invalid')
+userinput = input('username ')
+while userinput != 'stop'
+    if userinput in db:
+        print(db[user])
+    elif: userinput == 'all':
+        print(db)
+    else:
+        print('invalid')
